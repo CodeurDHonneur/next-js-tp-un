@@ -1,0 +1,632 @@
+[
+  {
+    "id": 1,
+    "slug": "introduction-a-typescript",
+    "title": "Introduction à TypeScript",
+    "category": "Développement",
+    "tags": ["typescript", "javascript", "web"],
+    "level": "beginner",
+    "content": "Apprenez les bases du typage statique avec TypeScript pour sécuriser votre code JavaScript..."
+  },
+  {
+    "id": 2,
+    "slug": "maitriser-flexbox-css",
+    "title": "Maitriser Flexbox CSS",
+    "category": "Design",
+    "tags": ["css", "frontend", "layout"],
+    "level": "beginner",
+    "content": "Le guide ultime pour comprendre l'alignement et la distribution de l'espace en CSS..."
+  },
+  {
+    "id": 3,
+    "slug": "patterns-react-avances",
+    "title": "Patterns React Avancés",
+    "category": "Développement",
+    "tags": ["react", "frontend", "architecture"],
+    "level": "advanced",
+    "content": "Plongée profonde dans les Higher-Order Components, Render Props et Compound Components..."
+  },
+  {
+    "id": 4,
+    "slug": "docker-pour-les-debutants",
+    "title": "Docker pour les débutants",
+    "category": "DevOps",
+    "tags": ["docker", "devops", "conteneurs"],
+    "level": "beginner",
+    "content": "Comment conteneuriser votre première application Node.js en quelques minutes..."
+  },
+  {
+    "id": 5,
+    "slug": "optimiser-requetes-sql",
+    "title": "Optimiser vos requêtes SQL",
+    "category": "Base de données",
+    "tags": ["sql", "performance", "backend"],
+    "level": "intermediate",
+    "content": "Utilisation des index, analyse des plans d'exécution et évitement du problème N+1..."
+  },
+  {
+    "id": 6,
+    "slug": "les-fondamentaux-de-ux-design",
+    "title": "Les fondamentaux de l'UX Design",
+    "category": "Design",
+    "tags": ["ux", "produit", "ergonomie"],
+    "level": "beginner",
+    "content": "Comprendre le parcours utilisateur et les principes de la psychologie cognitive..."
+  },
+  {
+    "id": 7,
+    "slug": "securite-api-rest-jwt",
+    "title": "Sécuriser une API REST avec JWT",
+    "category": "Sécurité",
+    "tags": ["auth", "security", "backend"],
+    "level": "intermediate",
+    "content": "Mise en place d'un flux d'authentification robuste avec JSON Web Tokens..."
+  },
+  {
+    "id": 8,
+    "slug": "introduction-au-machine-learning",
+    "title": "Introduction au Machine Learning",
+    "category": "IA",
+    "tags": ["ia", "python", "data-science"],
+    "level": "beginner",
+    "content": "Premier pas avec Scikit-learn pour créer un modèle de prédiction linéaire..."
+  },
+  {
+    "id": 9,
+    "slug": "kubernetes-en-production",
+    "title": "Kubernetes en production",
+    "category": "DevOps",
+    "tags": ["k8s", "cloud", "scaling"],
+    "level": "advanced",
+    "content": "Stratégies de déploiement, gestion des secrets et auto-scaling horizontal..."
+  },
+  {
+    "id": 10,
+    "slug": "les-nouveautes-de-nextjs-14",
+    "title": "Les nouveautés de Next.js 14",
+    "category": "Développement",
+    "tags": ["nextjs", "react", "ssr"],
+    "level": "intermediate",
+    "content": "Exploration des Server Actions et de l'optimisation du rendu côté serveur..."
+  },
+  {
+    "id": 11,
+    "slug": "accessibilite-web-a11y",
+    "title": "Accessibilité Web (a11y)",
+    "category": "Développement",
+    "tags": ["web", "html", "a11y"],
+    "level": "intermediate",
+    "content": "Comment rendre votre site utilisable par tous, y compris les personnes malvoyantes..."
+  },
+  {
+    "id": 12,
+    "slug": "git-rebase-vs-merge",
+    "title": "Git Rebase vs Merge",
+    "category": "Outils",
+    "tags": ["git", "workflow", "team"],
+    "level": "intermediate",
+    "content": "Comprendre quand utiliser le rebase pour garder un historique propre..."
+  },
+  {
+    "id": 13,
+    "slug": "rust-pour-le-web-wasm",
+    "title": "Rust pour le Web avec WASM",
+    "category": "Développement",
+    "tags": ["rust", "webassembly", "performance"],
+    "level": "advanced",
+    "content": "Compiler du code Rust en WebAssembly pour des calculs intensifs dans le navigateur..."
+  },
+  {
+    "id": 14,
+    "slug": "guide-complet-de-tailwind-css",
+    "title": "Guide complet de Tailwind CSS",
+    "category": "Design",
+    "tags": ["css", "frontend", "utility-first"],
+    "level": "beginner",
+    "content": "Pourquoi le Utility-First CSS change votre manière de coder vos interfaces..."
+  },
+  {
+    "id": 15,
+    "slug": "microservices-avec-nestjs",
+    "title": "Microservices avec NestJS",
+    "category": "Développement",
+    "tags": ["nestjs", "backend", "architecture"],
+    "level": "advanced",
+    "content": "Mise en place d'une architecture distribuée utilisant RabbitMQ ou Redis..."
+  },
+  {
+    "id": 16,
+    "slug": "tester-son-code-avec-jest",
+    "title": "Tester son code avec Jest",
+    "category": "Développement",
+    "tags": ["testing", "javascript", "quality"],
+    "level": "intermediate",
+    "content": "L'importance des tests unitaires et d'intégration dans le cycle de développement..."
+  },
+  {
+    "id": 17,
+    "slug": "introduction-a-go",
+    "title": "Introduction au langage Go",
+    "category": "Développement",
+    "tags": ["golang", "backend", "concurrency"],
+    "level": "beginner",
+    "content": "Découvrez la simplicité et la puissance du langage créé par Google..."
+  },
+  {
+    "id": 18,
+    "slug": "ci-cd-avec-github-actions",
+    "title": "CI/CD avec GitHub Actions",
+    "category": "DevOps",
+    "tags": ["github", "automation", "cicd"],
+    "level": "intermediate",
+    "content": "Automatisez vos tests et vos déploiements à chaque push de code..."
+  },
+  {
+    "id": 19,
+    "slug": "comprendre-les-closures-js",
+    "title": "Comprendre les closures en JS",
+    "category": "Développement",
+    "tags": ["javascript", "fundamentals"],
+    "level": "intermediate",
+    "content": "Démystifier l'un des concepts les plus importants et parfois confus de JavaScript..."
+  },
+  {
+    "id": 20,
+    "slug": "architecture-clean-code",
+    "title": "Architecture et Clean Code",
+    "category": "Développement",
+    "tags": ["clean-code", "architecture", "best-practices"],
+    "level": "advanced",
+    "content": "Écrire du code maintenable et évolutif en suivant les principes SOLID..."
+  },
+  {
+    "id": 21,
+    "slug": "flutter-vs-react-native-2024",
+    "title": "Flutter vs React Native en 2024",
+    "category": "Mobile",
+    "tags": ["mobile", "cross-platform", "flutter", "react-native"],
+    "level": "intermediate",
+    "content": "Comparaison détaillée des performances et de l'écosystème pour le développement mobile..."
+  },
+  {
+    "id": 22,
+    "slug": "introduction-a-pnpm",
+    "title": "Passer de NPM à pnpm",
+    "category": "Outils",
+    "tags": ["npm", "pnpm", "javascript", "performance"],
+    "level": "beginner",
+    "content": "Pourquoi et comment pnpm optimise l'espace disque et la vitesse d'installation de vos modules..."
+  },
+  {
+    "id": 23,
+    "slug": "graphql-le-guide-pratique",
+    "title": "GraphQL : Le guide pratique",
+    "category": "Développement",
+    "tags": ["api", "graphql", "backend", "frontend"],
+    "level": "intermediate",
+    "content": "En finir avec l'over-fetching et structurer vos requêtes de manière flexible..."
+  },
+  {
+    "id": 24,
+    "slug": "securite-web-top-10-owasp",
+    "title": "Sécurité Web : Le Top 10 OWASP",
+    "category": "Sécurité",
+    "tags": ["security", "owasp", "vulnerability"],
+    "level": "advanced",
+    "content": "Analyse des failles les plus critiques et comment protéger vos applications contre les injections SQL et XSS..."
+  },
+  {
+    "id": 25,
+    "slug": "data-viz-avec-d3js",
+    "title": "Data Viz dynamique avec D3.js",
+    "category": "Data",
+    "tags": ["d3js", "dataviz", "javascript", "svg"],
+    "level": "advanced",
+    "content": "Transformer des données brutes en graphiques interactifs et complexes pour le navigateur..."
+  },
+  {
+    "id": 26,
+    "slug": "initiation-a-python-pandas",
+    "title": "Initiation à Python Pandas",
+    "category": "Data",
+    "tags": ["python", "pandas", "data-science"],
+    "level": "beginner",
+    "content": "Manipulation de DataFrames et analyse de données statistiques pour les débutants..."
+  },
+  {
+    "id": 27,
+    "slug": "deployer-sur-vercel",
+    "title": "Déployer sur Vercel",
+    "category": "DevOps",
+    "tags": ["vercel", "cloud", "deployment", "jamstack"],
+    "level": "beginner",
+    "content": "Le workflow idéal pour mettre en ligne vos projets frontend en quelques clics..."
+  },
+  {
+    "id": 28,
+    "slug": "comprendre-le-protocole-http3",
+    "title": "Comprendre le protocole HTTP/3",
+    "category": "Réseau",
+    "tags": ["http3", "quic", "network", "web"],
+    "level": "advanced",
+    "content": "Comment QUIC améliore la latence et la fiabilité des connexions web modernes..."
+  },
+  {
+    "id": 29,
+    "slug": "principes-solid-en-exemples",
+    "title": "Les principes SOLID en exemples",
+    "category": "Développement",
+    "tags": ["architecture", "oop", "best-practices"],
+    "level": "intermediate",
+    "content": "Cinq règles fondamentales pour rendre votre code orienté objet plus robuste..."
+  },
+  {
+    "id": 30,
+    "slug": "redaction-documentation-technique",
+    "title": "Rédiger une bonne documentation",
+    "category": "Management",
+    "tags": ["documentation", "soft-skills", "writing"],
+    "level": "beginner",
+    "content": "Conseils pour écrire des README et des docs API que les développeurs aimeront lire..."
+  },
+  {
+    "id": 31,
+    "slug": "serverless-aws-lambda",
+    "title": "Le Serverless avec AWS Lambda",
+    "category": "Cloud",
+    "tags": ["aws", "serverless", "lambda", "backend"],
+    "level": "intermediate",
+    "content": "Exécuter du code sans gérer de serveurs : avantages, coûts et limites..."
+  },
+  {
+    "id": 32,
+    "slug": "design-system-atomique",
+    "title": "Créer un Design System Atomique",
+    "category": "Design",
+    "tags": ["design-system", "figma", "frontend", "atomic-design"],
+    "level": "intermediate",
+    "content": "Organiser ses composants de l'atome jusqu'aux pages complexes pour une cohérence totale..."
+  },
+  {
+    "id": 33,
+    "slug": "rust-ownership-system",
+    "title": "Le système d'Ownership de Rust",
+    "category": "Développement",
+    "tags": ["rust", "memory", "low-level"],
+    "level": "advanced",
+    "content": "Pourquoi Rust n'a pas besoin de Garbage Collector grâce au borrow checker..."
+  },
+  {
+    "id": 34,
+    "slug": "introduction-a-redis",
+    "title": "Introduction à Redis",
+    "category": "Base de données",
+    "tags": ["redis", "caching", "nosql"],
+    "level": "beginner",
+    "content": "Utiliser Redis comme base de données clé-valeur et système de cache ultra-rapide..."
+  },
+  {
+    "id": 35,
+    "slug": "optimisation-seo-pour-developpeurs",
+    "title": "Optimisation SEO pour Devs",
+    "category": "Développement",
+    "tags": ["seo", "web", "performance", "metatags"],
+    "level": "intermediate",
+    "content": "Vitesse de chargement, Core Web Vitals et balisage sémantique pour Google..."
+  },
+  {
+    "id": 36,
+    "slug": "agilite-scrum-vs-kanban",
+    "title": "Agilité : Scrum vs Kanban",
+    "category": "Management",
+    "tags": ["agile", "scrum", "kanban", "workflow"],
+    "level": "beginner",
+    "content": "Choisir la méthodologie adaptée à la taille et au rythme de votre équipe..."
+  },
+  {
+    "id": 37,
+    "slug": "typescript-utility-types",
+    "title": "Maîtriser les Utility Types TS",
+    "category": "Développement",
+    "tags": ["typescript", "types", "advanced-ts"],
+    "level": "intermediate",
+    "content": "Utilisation de Partial, Omit, Pick et Record pour manipuler vos types avec élégance..."
+  },
+  {
+    "id": 38,
+    "slug": "ia-generative-pour-le-code",
+    "title": "IA Générative et Code",
+    "category": "IA",
+    "tags": ["ia", "copilot", "productivity", "future"],
+    "level": "beginner",
+    "content": "Comment intégrer les outils comme Copilot dans son workflow sans perdre en qualité..."
+  },
+  {
+    "id": 39,
+    "slug": "infrastructure-as-code-terraform",
+    "title": "Infrastructure as Code avec Terraform",
+    "category": "DevOps",
+    "tags": ["terraform", "iac", "cloud", "devops"],
+    "level": "advanced",
+    "content": "Provisionner son infrastructure cloud de manière déclarative et reproductible..."
+  },
+  {
+    "id": 40,
+    "slug": "devenir-senior-developpeur",
+    "title": "Devenir Développeur Senior",
+    "category": "Carrière",
+    "tags": ["career", "mentoring", "leadership"],
+    "level": "advanced",
+    "content": "Au-delà de la technique : mentorat, prise de décision et vision globale d'un projet..."
+  },
+  {
+    "id": 41,
+    "slug": "comprendre-app-router-nextjs",
+    "title": "Tout comprendre sur l'App Router",
+    "category": "Next.js",
+    "tags": ["nextjs", "react", "routing"],
+    "level": "intermediate",
+    "content": "L'App Router introduit dans Next.js 13 marque un tournant majeur. Contrairement à l'ancien Pages Router, il repose sur les React Server Components. Cela permet de définir des layouts imbriqués qui ne rechargent pas lors de la navigation, améliorant ainsi drastiquement l'expérience utilisateur et les performances globales de l'application."
+  },
+  {
+    "id": 42,
+    "slug": "server-actions-mutation-donnees",
+    "title": "Server Actions : La fin des API de mutation ?",
+    "category": "Next.js",
+    "tags": ["nextjs", "forms", "backend"],
+    "level": "advanced",
+    "content": "Les Server Actions permettent d'exécuter du code asynchrone directement sur le serveur sans avoir à créer manuellement des routes API. En utilisant la directive 'use server', vous pouvez gérer l'envoi de formulaires, la validation de données et la mise à jour de votre base de données avec une sécurité accrue et moins de code boilerplate."
+  },
+  {
+    "id": 43,
+    "slug": "optimisation-images-next-image",
+    "title": "Maîtriser le composant Next/Image",
+    "category": "Next.js",
+    "tags": ["performance", "web", "seo"],
+    "level": "beginner",
+    "content": "Le composant Image de Next.js n'est pas qu'une simple balise HTML. Il gère automatiquement le lazy loading, le redimensionnement selon la taille de l'écran (srcset) et la conversion vers des formats modernes comme WebP ou AVIF. C'est l'outil indispensable pour obtenir un score de 100 en Core Web Vitals."
+  },
+  {
+    "id": 44,
+    "slug": "isr-vs-ssr-vs-ssg",
+    "title": "ISR, SSR ou SSG : Le guide ultime",
+    "category": "Next.js",
+    "tags": ["architecture", "rendering", "performance"],
+    "level": "intermediate",
+    "content": "Le choix de la stratégie de rendu est crucial. Le SSG est parfait pour les blogs, le SSR pour les pages hautement dynamiques, et l'Incremental Static Regeneration (ISR) offre le meilleur des deux mondes : la vitesse du statique avec la possibilité de mettre à jour le contenu en arrière-plan sans reconstruire tout le site."
+  },
+  {
+    "id": 45,
+    "slug": "middleware-nextjs-securite",
+    "title": "Protéger ses routes avec le Middleware",
+    "category": "Next.js",
+    "tags": ["security", "auth", "edge"],
+    "level": "intermediate",
+    "content": "Le fichier middleware.ts s'exécute avant que la requête ne soit traitée. C'est l'endroit idéal pour vérifier les cookies d'authentification, gérer les redirections selon la géolocalisation ou implémenter un système de limitation de débit (rate limiting) pour protéger vos ressources sensibles."
+  },
+  {
+    "id": 46,
+    "slug": "parallel-routes-layouts-complexes",
+    "title": "Parallel Routes et Layouts complexes",
+    "category": "Next.js",
+    "tags": ["ui", "routing", "ux"],
+    "level": "advanced",
+    "content": "Les Parallel Routes permettent d'afficher plusieurs pages simultanément dans le même layout, comme un dashboard avec une vue principale et une vue latérale indépendante. Cela permet de gérer des états de chargement distincts pour chaque section de l'interface, rendant l'application beaucoup plus fluide."
+  },
+  {
+    "id": 47,
+    "slug": "interception-routes-modales",
+    "title": "Intercepter des routes pour des modales",
+    "category": "Next.js",
+    "tags": ["ux", "routing", "design"],
+    "level": "advanced",
+    "content": "L'interception de routes permet de charger une page à l'intérieur d'une modale tout en conservant une URL propre. C'est la technique utilisée par Instagram : quand vous cliquez sur une photo, elle s'ouvre dans une modale, mais si vous rafraîchissez la page, vous arrivez sur la page dédiée à la photo."
+  },
+  {
+    "id": 48,
+    "slug": "font-optimization-google-fonts",
+    "title": "Optimisation des polices avec next/font",
+    "category": "Next.js",
+    "tags": ["performance", "design", "css"],
+    "level": "beginner",
+    "content": "Fini le Layout Shift causé par le chargement des polices ! Le module next/font télécharge automatiquement les polices Google au moment du build et les héberge localement. Il génère aussi des polices de secours (fallback) pour garantir que votre texte s'affiche instantanément sans saut visuel."
+  },
+  {
+    "id": 49,
+    "slug": "streaming-et-suspense-explication",
+    "title": "Le Streaming avec React Suspense",
+    "category": "Next.js",
+    "tags": ["react", "performance", "ux"],
+    "level": "intermediate",
+    "content": "Grâce au streaming, Next.js peut envoyer des morceaux de HTML au navigateur dès qu'ils sont prêts. En utilisant les composants Suspense, vous pouvez afficher des squelettes de chargement (skeletons) pour les parties lentes de votre page tout en laissant l'utilisateur interagir avec le reste du contenu déjà chargé."
+  },
+  {
+    "id": 50,
+    "slug": "seo-dynamique-metadata-api",
+    "title": "SEO dynamique avec la Metadata API",
+    "category": "Next.js",
+    "tags": ["seo", "marketing", "web"],
+    "level": "beginner",
+    "content": "Next.js propose une API de métadonnées puissante pour gérer vos balises title, description et Open Graph. Pour les pages dynamiques comme un e-commerce, la fonction generateMetadata permet de récupérer les infos du produit et d'injecter les bonnes balises pour un partage parfait sur les réseaux sociaux."
+  },
+  {
+    "id": 51,
+    "slug": "client-vs-server-components",
+    "title": "Client vs Server Components : Le dilemme",
+    "category": "Next.js",
+    "tags": ["react", "architecture", "performance"],
+    "level": "intermediate",
+    "content": "Il est crucial de savoir quand utiliser 'use client'. Par défaut, tout est Server Component. On n'utilise le mode client que pour l'interactivité (useState, useEffect) ou les APIs du navigateur. Garder le maximum de composants sur le serveur réduit drastiquement la taille du bundle JavaScript envoyé au client."
+  },
+  {
+    "id": 52,
+    "slug": "cache-tag-revalidation-nextjs",
+    "title": "Gestion du Cache et RevalidateTag",
+    "category": "Next.js",
+    "tags": ["caching", "performance", "backend"],
+    "level": "advanced",
+    "content": "Next.js étend l'API fetch pour inclure des options de mise en cache granulaires. Avec revalidateTag, vous pouvez invalider des segments spécifiques de votre cache à la demande via un webhook, ce qui est idéal lorsque vous mettez à jour un article dans votre CMS et que vous voulez que le changement soit immédiat."
+  },
+  {
+    "id": 53,
+    "slug": "auth-js-next-auth-v5",
+    "title": "Sécuriser Next.js avec Auth.js (v5)",
+    "category": "Sécurité",
+    "tags": ["auth", "security", "nextjs"],
+    "level": "intermediate",
+    "content": "Auth.js (anciennement NextAuth) est la solution standard pour l'authentification. La version 5 simplifie l'intégration avec les Server Components et les Server Actions. Elle supporte OAuth (Google, GitHub), les connexions par email sans mot de passe et la gestion des sessions via JWT ou base de données."
+  },
+  {
+    "id": 54,
+    "slug": "draft-mode-aperçu-cms",
+    "title": "Draft Mode : Prévisualiser le contenu",
+    "category": "Next.js",
+    "tags": ["cms", "workflow", "content"],
+    "level": "intermediate",
+    "content": "Le Draft Mode permet de visualiser des brouillons de votre CMS sans les publier officiellement. En activant un cookie sécurisé, Next.js bypass le cache statique pour récupérer les données en temps réel, offrant ainsi aux éditeurs de contenu une prévisualisation fidèle du rendu final."
+  },
+  {
+    "id": 55,
+    "slug": "i18n-internationalization-nextjs",
+    "title": "Internationalisation (i18n) sans larmes",
+    "category": "Next.js",
+    "tags": ["i18n", "global", "web"],
+    "level": "advanced",
+    "content": "Gérer plusieurs langues dans l'App Router demande une structure de dossiers spécifique ([lang]). En combinant les dictionnaires JSON et les segments d'URL, on peut créer une application multilingue performante, optimisée pour le SEO et facile à maintenir pour les traducteurs."
+  },
+  {
+    "id": 56,
+    "slug": "optimiser-scripts-tiers",
+    "title": "Gérer les scripts tiers (GTM, Pixel)",
+    "category": "Next.js",
+    "tags": ["performance", "marketing", "analytics"],
+    "level": "beginner",
+    "content": "Le composant next/script permet de charger des scripts externes de manière intelligente. Grâce à la stratégie 'worker', vous pouvez même déporter l'exécution de scripts lourds (comme Google Analytics) dans un Web Worker pour libérer le thread principal et garantir une interactivité totale."
+  },
+  {
+    "id": 57,
+    "slug": "prisma-nextjs-database",
+    "title": "Utiliser Prisma avec Next.js",
+    "category": "Base de données",
+    "tags": ["prisma", "orm", "typescript", "backend"],
+    "level": "intermediate",
+    "content": "Prisma est l'ORM parfait pour TypeScript. Couplé aux Server Components de Next.js, il permet de requêter sa base de données directement dans le composant UI, sans passer par une API intermédiaire. C'est une révolution pour la productivité et la sécurité du typage de bout en bout."
+  },
+  {
+    "id": 58,
+    "slug": "error-handling-global-error",
+    "title": "Gestion d'erreurs robuste",
+    "category": "Next.js",
+    "tags": ["quality", "ux", "javascript"],
+    "level": "intermediate",
+    "content": "Next.js permet de définir des fichiers error.tsx à chaque niveau de la hiérarchie des routes. Cela permet d'isoler les erreurs : si un composant latéral échoue, le reste de la page reste fonctionnel. Le fichier global-error.tsx sert quant à lui de dernier rempart pour les erreurs critiques du layout racine."
+  },
+  {
+    "id": 59,
+    "slug": "nextjs-edge-runtime-explication",
+    "title": "Le Edge Runtime : Rapidité extrême",
+    "category": "Next.js",
+    "tags": ["edge", "cloud", "performance"],
+    "level": "advanced",
+    "content": "Le Edge Runtime est une version allégée de Node.js qui s'exécute au plus proche de vos utilisateurs dans les centres de données du monde entier. C'est idéal pour des fonctions légères qui nécessitent une latence minimale, comme la personnalisation de contenu ou la vérification d'accès."
+  },
+  {
+    "id": 60,
+    "slug": "migration-pages-to-app-router",
+    "title": "Migrer de Pages à App Router",
+    "category": "Next.js",
+    "tags": ["migration", "architecture", "best-practices"],
+    "level": "advanced",
+    "content": "La migration ne doit pas se faire d'un coup. Next.js permet la coexistence des deux répertoires. Ce guide explique comment déplacer progressivement vos composants, adapter vos getServerSideProps en fetch() et transformer vos API Routes en Server Actions sans interrompre la production."
+  },
+  {
+    "id": 61,
+    "slug": "shadcn-ui-nextjs-setup",
+    "title": "Shadcn UI : La révolution des composants",
+    "category": "Design",
+    "tags": ["ui", "tailwind", "nextjs"],
+    "level": "beginner",
+    "content": "Shadcn UI n'est pas une bibliothèque de composants classique. C'est une collection de composants réutilisables que vous copiez-collez dans votre projet. Basé sur Radix UI et Tailwind CSS, il s'intègre parfaitement avec Next.js et offre un contrôle total sur le code source de vos éléments d'interface."
+  },
+  {
+    "id": 62,
+    "slug": "tally-forms-nextjs-integration",
+    "title": "Intégrer des formulaires complexes",
+    "category": "Next.js",
+    "tags": ["forms", "marketing", "web"],
+    "level": "beginner",
+    "content": "Apprenez à gérer les formulaires dans Next.js, de l'utilisation de bibliothèques comme React Hook Form pour la validation côté client, jusqu'à la réception des données côté serveur avec les Server Actions et l'affichage des états de succès ou d'erreur de manière élégante."
+  },
+  {
+    "id": 63,
+    "slug": "zod-validation-nextjs",
+    "title": "Validation de schéma avec Zod",
+    "category": "Développement",
+    "tags": ["typescript", "validation", "security"],
+    "level": "intermediate",
+    "content": "Zod est devenu le compagnon indispensable de Next.js pour valider les variables d'environnement, les réponses d'API et les entrées utilisateur dans les Server Actions. Il garantit que vos données respectent un contrat strict, évitant ainsi de nombreuses erreurs à l'exécution."
+  },
+  {
+    "id": 64,
+    "slug": "deployment-self-hosted-docker",
+    "title": "Auto-héberger Next.js avec Docker",
+    "category": "DevOps",
+    "tags": ["docker", "hosting", "devops"],
+    "level": "advanced",
+    "content": "Bien que Vercel soit la plateforme de prédilection, il est parfois nécessaire d'auto-héberger son application. Ce tutoriel montre comment créer un Dockerfile optimisé pour Next.js en utilisant le mode standalone pour réduire la taille de l'image finale et améliorer les temps de déploiement sur votre propre VPS."
+  },
+  {
+    "id": 65,
+    "slug": "partial-prerendering-ppr",
+    "title": "Partial Prerendering (PPR) : Le futur",
+    "category": "Next.js",
+    "tags": ["experimental", "performance", "rendering"],
+    "level": "advanced",
+    "content": "Le Partial Prerendering est une fonctionnalité expérimentale qui combine les avantages du statique et du dynamique. Il permet de figer le squelette d'une page au moment du build (statique) tout en laissant des trous dynamiques qui sont remplis au moment de la requête, offrant une expérience instantanée."
+  },
+  {
+    "id": 66,
+    "slug": "dark-mode-next-themes",
+    "title": "Implémenter le Dark Mode proprement",
+    "category": "Design",
+    "tags": ["css", "ux", "next-themes"],
+    "level": "beginner",
+    "content": "Utiliser next-themes est la meilleure façon de gérer le mode sombre dans Next.js sans effet de flash blanc au chargement. On verra comment synchroniser le thème avec Tailwind CSS et permettre à l'utilisateur de choisir entre le mode clair, sombre ou l'option système par défaut."
+  },
+  {
+    "id": 67,
+    "slug": "nextjs-og-image-generation",
+    "title": "Générer des images OG dynamiques",
+    "category": "Next.js",
+    "tags": ["seo", "design", "edge"],
+    "level": "advanced",
+    "content": "Avec la bibliothèque Satori intégrée à Next.js, vous pouvez générer des images de partage social (Open Graph) dynamiques en utilisant du HTML et du CSS. C'est idéal pour créer des cartes personnalisées pour chaque article de blog ou produit sans avoir besoin d'un designer."
+  },
+  {
+    "id": 68,
+    "slug": "testing-playwright-nextjs",
+    "title": "Tests E2E avec Playwright",
+    "category": "Développement",
+    "tags": ["testing", "quality", "automation"],
+    "level": "intermediate",
+    "content": "Le test de bout en bout (E2E) est crucial pour les applications critiques. Playwright permet de simuler le parcours d'un utilisateur réel dans votre application Next.js, de la connexion jusqu'à l'achat, garantissant que vos mises à jour ne cassent pas les fonctionnalités existantes."
+  },
+  {
+    "id": 69,
+    "slug": "monitoring-sentry-nextjs",
+    "title": "Monitorer les erreurs avec Sentry",
+    "category": "DevOps",
+    "tags": ["monitoring", "quality", "security"],
+    "level": "intermediate",
+    "content": "Une fois en production, vous devez savoir si vos utilisateurs rencontrent des bugs. Sentry s'intègre parfaitement à Next.js et permet de capturer les erreurs côté client et côté serveur, tout en fournissant le contexte nécessaire (trace, navigateur, page) pour les résoudre rapidement."
+  },
+  {
+    "id": 70,
+    "slug": "tuto-blog-complet-nextjs",
+    "title": "Créer un blog complet en 1h",
+    "category": "Next.js",
+    "tags": ["tutorial", "web", "markdown"],
+    "level": "beginner",
+    "content": "Ce guide récapitulatif combine tout ce que nous avons vu : structure de fichiers, lecture de fichiers Markdown locaux, génération de métadonnées et déploiement. C'est le projet parfait pour mettre en pratique vos connaissances et construire votre portfolio personnel."
+  }
+]
