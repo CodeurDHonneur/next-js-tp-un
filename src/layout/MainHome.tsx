@@ -1,13 +1,12 @@
 import { ArticleCard } from "@/components/ArticleCard";
 import { EmptyArticlesSection } from "@/components/EmptyArticlesSection";
-import CustomImage from "@/ui/Image";
 import { getLatestThreeArticles } from "@/utils/articles.util";
 
-const MainPage = async () => {
+const MainHome = async () => {
   const lastArticles = await getLatestThreeArticles();
 
   return (
-    <main className="grow bg-yellow-100">
+    <>
       <section className="mt-10 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight">
@@ -42,8 +41,8 @@ const MainPage = async () => {
           </p>
         </div>
       </section>
-    </main>
+    </>
   );
 };
 
-export default MainPage;
+export default MainHome;
