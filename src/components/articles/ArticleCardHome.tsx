@@ -25,7 +25,7 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
       <div className="relative h-64 w-full">
         {image && <CustomImage src={image} alt={article.title} className="h-full w-full"/>}
       </div>
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/70 to-transparent p-4 text-white">
+      <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black via-black/70 to-transparent p-4 text-white">
         <span className="text-xs font-semibold uppercase bg-blue-600 px-2 py-1 rounded-full">
           {article.category}
         </span>

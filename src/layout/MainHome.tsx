@@ -1,6 +1,6 @@
-import { ArticleCard } from "@/components/ArticleCard";
-import { EmptyArticlesSection } from "@/components/EmptyArticlesSection";
-import { getLatestThreeArticles } from "@/utils/articles.util";
+import { ArticleCard } from "@/components/articles/ArticleCardHome";
+import { EmptyArticlesSection } from "@/components/articles/EmptyArticlesSection";
+import { getLatestThreeArticles } from "@/utils/articles";
 
 const MainHome = async () => {
   const lastArticles = await getLatestThreeArticles();
