@@ -15,8 +15,7 @@ const ArticlesPage = async () => {
 
   return (
     <>
-      <h2 className='text-4xl md:text-5xl font-extrabold text-blue-600 tracking-tight text-center mt-6'>Exploration technique</h2>
-      <p className='font-semibold text-2xl text-center'>L'univers du développement vous ouvre ses portes</p>
+     
 
       {fetchArticles.length > 0 ?
         <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 p-10'>
