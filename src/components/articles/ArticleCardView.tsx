@@ -1,7 +1,7 @@
 "use client"
 
 import { IMAGES } from '@/lib/images'
-import { getRandomItem } from '@/lib/random'
+import { getRandomItem } from '@/utils/random'
 import { Article } from '@/types/articles'
 import CustomImage from '@/ui/Image'
 import troncateStr from '@/utils/troncateString'

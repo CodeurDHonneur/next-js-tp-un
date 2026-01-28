@@ -18,6 +18,19 @@ export async function getLatestThreeArticles(): Promise<Article[]> {
     if(data) return data.slice(-3);
     else return [];
 }
+
+//Fonction de récupération d'un article selon son id 
+export async function getArticle(id: string): Promise<Article | []>{
+  const data = await getAllArticles();
+
+  if(!data) return [];
+  
+  const article = data.find(item => item.id === parseInt(id));
+
+  if(!article) return [];
+
+  return article;
+}
 /**
  * const ArticleCard = ({ article }) => {
   return (

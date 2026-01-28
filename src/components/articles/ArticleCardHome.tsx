@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { IMAGES } from "@/lib/images";
-import { getRandomItem } from "@/lib/random";
+import { getRandomItem } from "@/utils/random";
 import { Article } from "@/types/articles";
 import CustomImage from "@/ui/Image";
 
