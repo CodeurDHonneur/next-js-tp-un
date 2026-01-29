@@ -2,7 +2,7 @@
 import ArticleCardView from '@/components/articles/ArticleCardView'; // Composant pour afficher chaque article sous forme de carte
 import ArticleFiltersBar from '@/components/articles/ArticleFiltersBar'; // Barre de filtres permettant de sélectionner des critères
 import { Article } from '@/types/articles'; // Définition du type d'article pour la sécurité de type
-import { getArticlesAndFacets, getArticlesViaObject } from '@/utils/articles'; // Fonction pour récupérer les articles et les options de filtres (facets)
+import { getArticlesAndFacets} from '@/utils/articles'; // Fonction pour récupérer les articles et les options de filtres (facets)
 import parseFilters from '@/utils/parseFilters'; // Fonction pour parser les filtres de l'URL
 import constructValideObj from '@/utils/parseFilters'; // Import identique à `parseFilters`, peut être supprimé si inutilisé
 import { notFound } from 'next/navigation'; // Fonction de redirection vers une page 404 si les filtres sont invalides
