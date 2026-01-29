@@ -40,7 +40,7 @@ export async function getArticlesViaObject(obj: { category?: string, tag?: strin
   const articles = await getAllArticles();
 
   if (articles.length === 0) return [];
-  console.log(obj)
+ 
   return articles.filter((article) => {
     if (
       obj.category &&
@@ -68,4 +68,22 @@ export async function getArticlesViaObject(obj: { category?: string, tag?: strin
     return true;
   });
 
+}
+
+type Filters = {
+  category?: string
+  tag?: string
+  level?: string
+}
+
+export async function getArticlesAndFacets(filters: Filters) {
+  const articles = await getArticlesViaObject(filters)
+
+  const facets = {
+    categories: [...new Set(articles.map(a => a.category))],
+    tags: [...new Set(articles.flatMap(a => a.tags))],
+    levels: [...new Set(articles.map(a => a.level))]
+  }
+
+  return { articles, facets }
 }
