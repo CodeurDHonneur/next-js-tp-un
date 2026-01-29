@@ -13,7 +13,13 @@ async function page(props: Props) {
     const params = await props.params;
     const { id } = params;
 
-    const article = await getArticle(id) as Article;
+    const convertId = parseInt(id);
+
+    if(!convertId){
+        notFound();
+    }
+
+    const article = await getArticle(convertId) as Article;
 
     if (!article) {
         notFound();
