@@ -1,41 +1,32 @@
 import Link from 'next/link'
-import React from 'react'
+
 
 function FilterArticles() {
-    return (
-     <div className="max-w-4xl mx-auto px-6 mb-2 mt-1">
-  <div className="bg-white p-4 rounded-3xl shadow-xl shadow-slate-900/5 border border-slate-100">
-    
-    {/* Ajout de justify-between et items-center */}
-    <div className="flex flex-wrap md:flex-nowrap items-center justify-between gap-3">
-
-      {/* GROUPE GAUCHE : Tous + Selects */}
-      <div className="flex flex-wrap items-center gap-3 flex-grow">
+  return (
+    <div className="max-w-4xl mx-auto px-6 mb-2 mt-1">
+      <div className="bg-white p-4 rounded-3xl shadow-xl shadow-slate-900/5 border border-slate-100 flex justify-between gap-6">
         <Link href="/articles" className="px-6 py-3 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 active:scale-95 transition-all shadow-lg shadow-blue-200 whitespace-nowrap">
           Tous
         </Link>
 
-        {/* J'ai ajouté flex-grow aux selects pour qu'ils occupent l'espace sur mobile */}
-        <select className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-[120px]">
-          <option>Catégorie</option>
-          <option>Tutoriels</option>
-          <option>Actualités</option>
-        </select>
 
-        <select className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-[120px]">
-          <option>Niveau</option>
-          <option>Débutant</option>
-          <option>Expert</option>
-        </select>
-
-        <select className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-[120px]">
-          <option>Date</option>
-          <option>Récent</option>
-          <option>Ancien</option>
-        </select>
-      </div>
-
-      {/* GROUPE DROITE : Reset */}
+        <div className='grow flex justify-between'>
+          <select className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-[120px]">
+            <option>Catégorie</option>
+            <option>Tutoriels</option>
+            <option>Actualités</option>
+          </select>
+          <select className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-[120px]">
+            <option>Niveau</option>
+            <option>Débutant</option>
+            <option>Expert</option>
+          </select>
+          <select className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-[120px]">
+            <option>Date</option>
+            <option>Récent</option>
+            <option>Ancien</option>
+          </select>
+        </div>
       <div className="flex items-center">
         <button
           title="Réinitialiser les filtres"
@@ -52,12 +43,14 @@ function FilterArticles() {
           </svg>
         </button>
       </div>
+      </div>
+
+
 
     </div>
-  </div>
-</div>
-       
-    )
+    // </div>
+
+  )
 }
 
 export default FilterArticles
