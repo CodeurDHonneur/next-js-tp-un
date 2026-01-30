@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 
-function FilterArticles() {
+function ArticleFiltersBar() {
   return (
     <div className="max-w-4xl mx-auto px-6 mb-2 mt-1">
       <div className="bg-white p-4 rounded-3xl shadow-xl shadow-slate-900/5 border border-slate-100 flex justify-between gap-6">
@@ -53,4 +53,4 @@ function FilterArticles() {
   )
 }
 
-export default FilterArticles
+export default ArticleFiltersBar
