@@ -1,4 +1,5 @@
 "use client"
+
 import Link from 'next/link'
 import { useRouter } from "next/navigation";
 
@@ -66,29 +67,29 @@ const resetFilters = () => router.push("/articles");  // Redirige vers la page /
         <div className='grow flex justify-between'>
           <select
             className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-50"
-            value={activeFilters?.category ?? ""}
+            value={activeFilters?.category}
             onChange={e => updateFilter("category", e.target.value)}
           >
-            <option value="" disabled>Category</option>
+            <option value="" disabled selected>Category {facets?.categories.length}</option>
             {facets?.categories.map(cat => (
               <option key={cat} value={cat}>{cat}</option>
             ))}
           </select>
           <select
             className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-50"
-            value={activeFilters?.tag ?? ""}
+            value={activeFilters?.tag}
             onChange={e => updateFilter("tag", e.target.value)}
           >
-            <option value="" disabled>Tag</option>
+            <option value="" disabled selected>Tag {facets?.tags.length}</option>
             {facets?.tags.map(tag => (
               <option key={tag} value={tag}>{tag}</option>
             ))}
           </select>
           <select className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-50"
-            value={activeFilters?.level ?? ""}
+            value={activeFilters?.level}
             onChange={e => updateFilter("level", e.target.value)}
           >
-            <option value="" disabled>Level</option>
+            <option value="" disabled selected>Level {facets?.levels.length}</option>
             {facets?.levels.map(level => (
               <option key={level} value={level}>{level}</option>
             ))}

@@ -1,6 +1,8 @@
 // Liste des clés autorisées dans l'URL pour le filtrage des articles
 const allowedKeys = ["category", "tag", "level"];
 
+
+
 // Définition du type `Filters` qui représente un ensemble de filtres potentiels pour les articles
 type Filters = {
     category?: string;  // Filtre sur la catégorie de l'article
