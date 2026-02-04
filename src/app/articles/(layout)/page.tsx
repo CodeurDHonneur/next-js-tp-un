@@ -6,11 +6,30 @@ import { EmptyArticlesSection } from '@/components/articles/EmptyArticlesSection
 // Importation de la fonction utilitaire qui récupère les articles et les facets (filtres)
 import { getArticlesAndFacets } from '@/utils/articles'
 
+type Props = {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+
 // Composant principal de la page qui récupère et affiche les articles
-const ArticlesPage = async () => {
+const ArticlesPage = async ({ searchParams }: Props) => {
+  // 1. On attend la résolution des paramètres de recherche
+  const sParams = await searchParams;
+  console.log("paramètres de route", sParams);
+
+    // 2. On construit l'objet activeFilters proprement
+  // Contrairement aux Paths, ici on n'a plus besoin de "parseFilters" complexe 
+  // car les clés sont déjà nommées dans l'URL !
+
+  const activeFilters = {
+    category: typeof sParams.category === 'string' ? sParams.category : undefined,
+    tag: typeof sParams.tag === 'string' ? sParams.tag : undefined,
+    level: typeof sParams.level === 'string' ? sParams.level : undefined,
+  }
+
 
   // Récupération des articles et des facets (filtres) via la fonction utilitaire
-  const { articles, facets } = await getArticlesAndFacets({});
+  const { articles, facets } = await getArticlesAndFacets(activeFilters);
 
   return (
     <>
