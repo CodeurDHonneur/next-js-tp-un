@@ -18,7 +18,10 @@ export const metadata: Metadata = {
     "Next.js",
     "JavaScript",
     "veille technologique",
-  ]
+  ],
+  alternates: {
+    canonical: '/articles', // On dit à Google : "La seule vraie page, c'est /articles"
+  },
 };
 
 export default function RootLayout({
