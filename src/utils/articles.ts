@@ -36,9 +36,9 @@ const normalize = (value?: string) =>
 value ? decodeURIComponent(value).trim().toLowerCase() : undefined;
 
 //Récupération d'un ensemble d'articles selon une url donnée
-export async function fetchArticlesWithFilters(obj: { category?: string, tag?: string, level?: string }): Promise<Article[] | []> {
+export async function fetchArticlesWithFilters(obj: Filters): Promise<Article[] | []> {
   const articles = await getAllArticles();
-
+ 
   if (articles.length === 0) return [];
  
   return articles.filter((article) => {

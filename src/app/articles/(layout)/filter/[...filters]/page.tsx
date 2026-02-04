@@ -4,7 +4,6 @@ import ArticleFiltersBar from '@/components/articles/ArticleFiltersBar'; // Barr
 import { Article } from '@/types/articles'; // Définition du type d'article pour la sécurité de type
 import { getArticlesAndFacets} from '@/utils/articles'; // Fonction pour récupérer les articles et les options de filtres (facets)
 import parseFilters from '@/utils/parseFilters'; // Fonction pour parser les filtres de l'URL
-import constructValideObj from '@/utils/parseFilters'; // Import identique à `parseFilters`, peut être supprimé si inutilisé
 import { notFound } from 'next/navigation'; // Fonction de redirection vers une page 404 si les filtres sont invalides
 import React from 'react'; // Import de React, nécessaire dans les composants Next.js
 
