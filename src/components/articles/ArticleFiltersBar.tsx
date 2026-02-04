@@ -70,7 +70,7 @@ const resetFilters = () => router.push("/articles");  // Redirige vers la page /
             value={activeFilters?.category}
             onChange={e => updateFilter("category", e.target.value)}
           >
-            <option value="" disabled selected>Category {facets?.categories.length}</option>
+            <option value="">Category </option>
             {facets?.categories.map(cat => (
               <option key={cat} value={cat}>{cat}</option>
             ))}
@@ -80,7 +80,7 @@ const resetFilters = () => router.push("/articles");  // Redirige vers la page /
             value={activeFilters?.tag}
             onChange={e => updateFilter("tag", e.target.value)}
           >
-            <option value="" disabled selected>Tag {facets?.tags.length}</option>
+            <option value="">Tag </option>
             {facets?.tags.map(tag => (
               <option key={tag} value={tag}>{tag}</option>
             ))}
@@ -89,7 +89,7 @@ const resetFilters = () => router.push("/articles");  // Redirige vers la page /
             value={activeFilters?.level}
             onChange={e => updateFilter("level", e.target.value)}
           >
-            <option value="" disabled selected>Level {facets?.levels.length}</option>
+            <option value="">Level </option>
             {facets?.levels.map(level => (
               <option key={level} value={level}>{level}</option>
             ))}
