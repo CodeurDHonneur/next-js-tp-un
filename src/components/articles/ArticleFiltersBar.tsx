@@ -11,17 +11,17 @@ function ArticleFiltersBar() {
 
 
         <div className='grow flex justify-between'>
-          <select className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-[120px]">
+          <select className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-30">
             <option>Catégorie</option>
             <option>Tutoriels</option>
             <option>Actualités</option>
           </select>
-          <select className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-[120px]">
+          <select className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-30">
             <option>Niveau</option>
             <option>Débutant</option>
             <option>Expert</option>
           </select>
-          <select className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-[120px]">
+          <select className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-30">
             <option>Date</option>
             <option>Récent</option>
             <option>Ancien</option>
