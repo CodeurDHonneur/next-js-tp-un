@@ -15,7 +15,7 @@ type Props = {
 const ArticlesPage = async ({ searchParams }: Props) => {
   // 1. On attend la résolution des paramètres de recherche
   const sParams = await searchParams;
-  console.log("paramètres de route", sParams);
+ 
 
     // 2. On construit l'objet activeFilters proprement
   // Contrairement aux Paths, ici on n'a plus besoin de "parseFilters" complexe 
