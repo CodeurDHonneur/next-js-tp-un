@@ -6,18 +6,26 @@ import { EmptyArticlesSection } from '@/components/articles/EmptyArticlesSection
 // Importation de la fonction utilitaire qui récupère les articles et les facets (filtres)
 import { getArticlesAndFacets } from '@/utils/articles'
 
+interface Props {
+  searchParams: Promise<{
+    tag: string,
+    level: string
+  }>
+}
 // Composant principal de la page qui récupère et affiche les articles
-const ArticlesPage = async () => {
+const ArticlesPage = async ({searchParams}: Props) => {
+
+  const sParams = await searchParams;
 
   // Récupération des articles et des facets (filtres) via la fonction utilitaire
-  const { articles, facets } = await getArticlesAndFacets({});
+  const { articles, facets } = await getArticlesAndFacets(sParams);
 
   return (
     <>
       {/* Affichage de la barre de filtres avec les facets et aucun filtre actif initialement */}
       <FilterArticles
         facets={facets}          //Passe les options disponibles pour chaque filtre (catégorie, tag, niveau) 
-        activeFilters={{}}       //Aucun filtre actif au départ 
+        activeFilters={sParams}       
       />
       
       {/* Vérification si des articles sont présents */}

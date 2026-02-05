@@ -31,7 +31,7 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
         </span>
 
         <Link
-          href={`/articles/${article.id}`}
+          href={`/articles/post/${article.id}`}
           className="mt-2 block text-xl font-bold hover:underline"
         >
           {article.title}

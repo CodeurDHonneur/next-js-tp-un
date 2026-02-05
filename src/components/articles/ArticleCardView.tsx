@@ -49,10 +49,10 @@ function ArticleCardView({ article }: ArticleCardViewProps) {
 
         <div className='mt-auto'>
           <Link 
-          href={`/articles/${article.id}`}
+          href={`/articles/post/${article.id}`}
           className='bg-[#FFE57F] hover:bg-[#FFD54F] text-[#5D4037] text-xs font-bold py-2 px-6 rounded-xl transition-colors shadow-sm'
           >
-            Lire l'article 
+            Lire l&pos;article 
           </Link>
         </div>
       </div>

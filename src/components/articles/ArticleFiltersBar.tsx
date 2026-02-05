@@ -1,7 +1,8 @@
 "use client"
 
+
 import Link from 'next/link'
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 type Filters = {
   category?: string
@@ -21,40 +22,64 @@ interface Props {
 }
 
 function ArticleFiltersBar({ facets, activeFilters }: Props) {
-  
+
+  console.log(activeFilters);
   // Récupère le router de Next.js pour manipuler l'URL
-const router = useRouter();
+  const router = useRouter();
 
-// Fonction pour construire l'URL en fonction des filtres actifs
-const buildUrl = (filters: Filters) => {
-  const segments = [];  // Tableau qui contiendra les segments d'URL (ex : /articles/filter/category/nextjs/tag/routing)
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
 
-  // Itère à travers chaque clé du filtre
-  for (const key in filters) {
-    const value = filters[key as keyof Filters];  // Récupère la valeur associée à chaque clé de filtre
-    if (value) segments.push(key, value);  // Si la valeur existe, ajoute la clé et la valeur à segments
+  // Fonction pour construire l'URL en fonction des filtres actifs
+  const buildUrl = (filters: Filters) => {
+    const segments = [];  // Tableau qui contiendra les segments d'URL (ex : /articles/filter/category/nextjs/tag/routing)
+
+    // Itère à travers chaque clé du filtre
+    for (const key in filters) {
+      const value = filters[key as keyof Filters];  // Récupère la valeur associée à chaque clé de filtre
+      if (value) segments.push(key, value);  // Si la valeur existe, ajoute la clé et la valeur à segments
+    }
+
+    // Si des segments ont été ajoutés (c'est-à-dire des filtres actifs), retourne l'URL construite avec les segments
+    // Sinon, retourne l'URL de base sans filtres
+    return segments.length
+      ? `/articles/filter/${segments.join("/")}`  // Exemple : /articles/filter/category/nextjs/tag/routing
+      : `/articles`;  // Exemple : /articles sans filtres
   }
 
-  // Si des segments ont été ajoutés (c'est-à-dire des filtres actifs), retourne l'URL construite avec les segments
-  // Sinon, retourne l'URL de base sans filtres
-  return segments.length
-    ? `/articles/filter/${segments.join("/")}`  // Exemple : /articles/filter/category/nextjs/tag/routing
-    : `/articles`;  // Exemple : /articles sans filtres
-}
+  // Fonction pour mettre à jour l'URL en modifiant un filtre spécifique
+  const updateFilter = (key: keyof Filters, value?: string) => {
+    // Appelle router.push pour modifier l'URL, en utilisant la fonction buildUrl pour générer la nouvelle URL avec le filtre mis à jour
+    router.push(
+      buildUrl({
+        ...activeFilters,  // Ajoute tous les filtres existants
+        [key]: value || undefined  // Modifie le filtre actuel, ou le supprime si `value` est undefined
+      })
+    );
+  }
 
-// Fonction pour mettre à jour l'URL en modifiant un filtre spécifique
-const updateFilter = (key: keyof Filters, value?: string) => {
-  // Appelle router.push pour modifier l'URL, en utilisant la fonction buildUrl pour générer la nouvelle URL avec le filtre mis à jour
-  router.push(
-    buildUrl({
-      ...activeFilters,  // Ajoute tous les filtres existants
-      [key]: value || undefined  // Modifie le filtre actuel, ou le supprime si `value` est undefined
-    })
-  );
-}
+  const newUpdateFilter = (key: keyof Filters, value?: string) => {
+    const params = new URLSearchParams(searchParams.toString());
 
-// Fonction pour réinitialiser tous les filtres en renvoyant à l'URL de base sans filtres
-const resetFilters = () => router.push("/articles");  // Redirige vers la page /articles sans filtres
+    if (key === "category") {
+      // Si on change de catégorie, on change de chemin (Path)
+      // On garde les tags/levels actuels si on veut, ou on les reset
+      const newPath = value ? `/articles/category/${decodeURIComponent(value)}` : `/articles`;
+      const queryString = params.toString();
+      router.push(queryString ? `${newPath}?${queryString}` : newPath);
+    } else {
+      // Si on change tag ou level, on reste sur le même chemin, on change juste le ?query
+      if (value) {
+        const normalizeValue = decodeURIComponent(value);
+        params.set(key, normalizeValue as string)
+      }
+      else params.delete(key);
+
+      router.push(`${pathname}?${params.toString()}`);
+    }
+  }
+  // Fonction pour réinitialiser tous les filtres en renvoyant à l'URL de base sans filtres
+  const resetFilters = () => router.push("/articles");  // Redirige vers la page /articles sans filtres
 
 
 
@@ -67,10 +92,10 @@ const resetFilters = () => router.push("/articles");  // Redirige vers la page /
         <div className='grow flex justify-between'>
           <select
             className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-50"
-            value={activeFilters?.category}
-            onChange={e => updateFilter("category", e.target.value)}
+            value={activeFilters?.category ?? ""}
+            onChange={e => newUpdateFilter("category", e.target.value)}
           >
-            <option value="" disabled selected>Category {facets?.categories.length}</option>
+            <option value="">Category</option>
             {facets?.categories.map(cat => (
               <option key={cat} value={cat}>{cat}</option>
             ))}
@@ -78,18 +103,18 @@ const resetFilters = () => router.push("/articles");  // Redirige vers la page /
           <select
             className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-50"
             value={activeFilters?.tag}
-            onChange={e => updateFilter("tag", e.target.value)}
+            onChange={e => newUpdateFilter("tag", e.target.value)}
           >
-            <option value="" disabled selected>Tag {facets?.tags.length}</option>
+            <option value="">Tag </option>
             {facets?.tags.map(tag => (
               <option key={tag} value={tag}>{tag}</option>
             ))}
           </select>
           <select className="bg-slate-50 border-none text-slate-600 py-3 pl-4 pr-10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer appearance-none min-w-50"
             value={activeFilters?.level}
-            onChange={e => updateFilter("level", e.target.value)}
+            onChange={e => newUpdateFilter("level", e.target.value)}
           >
-            <option value="" disabled selected>Level {facets?.levels.length}</option>
+            <option value="">Level</option>
             {facets?.levels.map(level => (
               <option key={level} value={level}>{level}</option>
             ))}
