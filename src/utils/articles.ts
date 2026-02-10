@@ -36,20 +36,21 @@ export async function getArticle(id: string): Promise<Article | []>{
 
 
 //Récupération des articles en fonction des valeurs passées dans l'URL
-export async function fetchArticlesWithFilters(obj: Filters, str?: string): Promise<Article[] | []> {
+export async function fetchArticlesWithFilters(obj: Filters): Promise<Article[] | []> {
 
 
     const getArticles = await getAllArticles();
 
     if(!getArticles) return [];
     
-    if(str === "articles") return getArticles;
+    // if(str === "articles") return getArticles;
+    if(Object.keys(obj).length === 0) return getArticles;
 
-    // logique 
+   
     const filteredData = getArticles.filter(article => {
       
         for(const key in obj){
-            console.log(key);
+           
             const value = obj[key as keyof Filters];
             
             if(!value || article[key as keyof Article] !== value) return false;
@@ -62,8 +63,8 @@ export async function fetchArticlesWithFilters(obj: Filters, str?: string): Prom
 
 
 
-export async function getArticlesAndFacets(filters: Filters, str?: string): Promise <getArticlesAndFacetsType> {
-    const articles = await fetchArticlesWithFilters(filters, str);
+export async function getArticlesAndFacets(filters: Filters): Promise <getArticlesAndFacetsType> {
+    const articles = await fetchArticlesWithFilters(filters);
      
     // console.log(articles.length);
     const tempArray: string[] = [];

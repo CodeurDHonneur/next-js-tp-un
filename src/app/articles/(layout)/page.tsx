@@ -9,7 +9,8 @@ const ArticlesPage = async () => {
 
 
   // const fetchArticles = await getAllArticles();
-  const {articles, facets} = await getArticlesAndFacets({}, "articles");
+  // const {articles, facets} = await getArticlesAndFacets({}, "articles");
+  const {articles, facets} = await getArticlesAndFacets({});
 
   // const firstElement = fetchArticles[0];
 
