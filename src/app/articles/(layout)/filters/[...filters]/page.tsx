@@ -18,7 +18,7 @@ async function FilterPage(props: Props) {
   //Transforamtion du tableau en objet pour faciliter le filter
   const activeFilters = parseFilters(getParamsURL);
 
-  console.log(activeFilters);
+  // console.log(activeFilters);
 
   if (!activeFilters) {
     notFound();

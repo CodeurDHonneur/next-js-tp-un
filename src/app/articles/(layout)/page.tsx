@@ -10,20 +10,26 @@ const ArticlesPage = async () => {
 
   // const fetchArticles = await getAllArticles();
   // const {articles, facets} = await getArticlesAndFacets({}, "articles");
-  const {articles, facets} = await getArticlesAndFacets({});
+  const { articles, facets } = await getArticlesAndFacets({});
 
   // const firstElement = fetchArticles[0];
 
-  
+
 
   return (
     <>
-      <ArticleFiltersBar activeFilters={{}} facets={facets}/>
-      {articles.length > 0 ?
-        <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 p-10'>
-          {articles.map(article => <ArticleCardView article={article} key={article.id}/>)}
+      <ArticleFiltersBar activeFilters={{}} facets={facets} />
 
-        </div>
+      {articles.length > 0 ?
+        (
+          <>
+            <div className='pl-3 font-medium'>{articles.length}</div>
+            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 p-10'>
+              {articles.map(article => <ArticleCardView article={article} key={article.id} />)}
+
+            </div>
+          </>
+        )
 
         : <EmptyArticlesSection />}
     </>

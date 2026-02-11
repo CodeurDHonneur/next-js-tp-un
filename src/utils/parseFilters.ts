@@ -21,7 +21,6 @@ export default function parseFilters(filters: string[]){
             const key = supSpace(filters[i]);
             const value = supSpace(filters[i + 1]);
 
-            console.log("valeur => ", value, value == "")
             
             if(!key ||  !value || !allowedKey.includes(key)) continue;
 

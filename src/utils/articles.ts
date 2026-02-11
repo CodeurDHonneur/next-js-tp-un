@@ -5,9 +5,22 @@ import { getArticlesAndFacetsType } from "@/types/getArticlesAndFacets";
 
 
 //Fonction pour récupérer tous les articles 
-export async function getAllArticles(): Promise<Article[]>{
+export async function getAllArticles(): Promise<Article[] | []> {
+    // const fetchDatas = await fetch("http://localhost:3000/api/articles", {
+    //     cache: "force-cache"
+    // });
+    // const fetchDatas = await fetch("http://localhost:3000/api/articles", {
+    //     cache: "no-store"
+    // });
+    const fetchDatas = await fetch("http://localhost:3000/api/articles", {
+        next: {
+            revalidate: 20, // 👈 ISR activé
+        },
+    });
 
-    const data = articles as Article[];
+    if (!fetchDatas.ok) return [];
+    // const data = articles as Article[];
+    const data = await fetchDatas.json() as Article[];
 
     return data;
 }
@@ -17,21 +30,21 @@ export async function getAllArticles(): Promise<Article[]>{
 export async function getLatestThreeArticles(): Promise<Article[]> {
     const data = await getAllArticles();
 
-    if(data) return data.slice(-3);
+    if (data) return data.slice(-3);
     else return [];
 }
 
 //Fonction de récupération d'un article selon son id 
-export async function getArticle(id: string): Promise<Article | []>{
-  const data = await getAllArticles();
+export async function getArticle(id: string): Promise<Article | []> {
+    const data = await getAllArticles();
 
-  if(!data) return [];
-  
-  const article = data.find(item => item.id === parseInt(id));
+    if (!data) return [];
 
-  if(!article) return [];
+    const article = data.find(item => item.id === parseInt(id));
 
-  return article;
+    if (!article) return [];
+
+    return article;
 }
 
 
@@ -41,19 +54,19 @@ export async function fetchArticlesWithFilters(obj: Filters): Promise<Article[] 
 
     const getArticles = await getAllArticles();
 
-    if(!getArticles) return [];
-    
-    // if(str === "articles") return getArticles;
-    if(Object.keys(obj).length === 0) return getArticles;
+    if (!getArticles) return [];
 
-   
+    // if(str === "articles") return getArticles;
+    if (Object.keys(obj).length === 0) return getArticles;
+
+
     const filteredData = getArticles.filter(article => {
-      
-        for(const key in obj){
-           
+
+        for (const key in obj) {
+
             const value = obj[key as keyof Filters];
-            
-            if(!value || article[key as keyof Article] !== value) return false;
+
+            if (!value || article[key as keyof Article] !== value) return false;
             else return true;
         }
     });
@@ -63,13 +76,13 @@ export async function fetchArticlesWithFilters(obj: Filters): Promise<Article[] 
 
 
 
-export async function getArticlesAndFacets(filters: Filters): Promise <getArticlesAndFacetsType> {
+export async function getArticlesAndFacets(filters: Filters): Promise<getArticlesAndFacetsType> {
     const articles = await fetchArticlesWithFilters(filters);
-     
+
     // console.log(articles.length);
     const tempArray: string[] = [];
     articles.forEach(article => article.tags.forEach(tag => {
-        if(!tempArray.includes(tag)) tempArray.push(tag)
+        if (!tempArray.includes(tag)) tempArray.push(tag)
     }));
 
     // console.log(...new Set(...articles.map(article => article.tags)));
@@ -79,5 +92,5 @@ export async function getArticlesAndFacets(filters: Filters): Promise <getArticl
         levels: [...new Set(articles.map(article => article.level))]
     }
 
-    return {articles, facets}
+    return { articles, facets }
 } 
