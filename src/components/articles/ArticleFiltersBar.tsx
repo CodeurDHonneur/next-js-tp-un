@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 type Filters = {
   category?: string
@@ -23,6 +23,7 @@ function ArticleFiltersBar({ facets, activeFilters }: Props) {
   
   // Récupère le router de Next.js pour manipuler l'URL
 const router = useRouter();
+
 
 // Fonction pour construire l'URL en fonction des filtres actifs
 const buildUrl = (filters: Filters) => {
